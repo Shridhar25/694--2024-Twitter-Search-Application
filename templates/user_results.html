@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vertical Page Division</title>
+<link rel="stylesheet" type="text/css" href="static/user_results.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="left-side">
+        <h3>{{ rows[0][1] }}</h3>
+        <span>@{{ rows[0][2] }}</span>
+        <p>{{ rows[0][3] }}</p>
+        <br>
+        <i class="fa fa-external-link" aria-hidden="true"></i> {{ rows[0][4] }}
+        <i class="fa fa-calendar"></i> Joined {{ [0][10] }}
+        <div>{{ rows[0][6] }}<span> Followers</span></div>
+        <div>{{ rows[0][7] }} <span> Friends </span></div>
+        <div>{{ rows[0][8] }}<span> Favorites </span></div>
+        <div>{{ rows[0][9] }}<span> Statuses </span></div>
+    
+    
+  <div class="right-side">
+    {% for tweet in tweets %}
+    <div class="tweet-container">
+        <div class="tweet">
+            <div class="head">
+                <div class="image"></div>
+                    <div class="name">
+                        <div class="username">
+                            {{tweet.User_Name}}
+                            <!--<span class="material-icons-round">verified</span> -->
+                    
+                        </div>
+                    <div class="handle">@{{tweet.User_Screen_Name}}</div>
+                </div>
+            </div>
+
+                <div class="content">
+                    <div class="container">
+                        {{tweet.Text}}
+                        <br><br>
+                        <div class="date">{{tweet.created_at}}</div>
+                    </div>
+                </div>
+
+                <div class="controls">
+
+                    <i class="fa-solid fa-retweet"></i>
+                    <span>{{tweet.Retweet_Count}}</span>
+
+                    <i class="fa-solid fa-heart"></i>
+                    <span>{{tweet.Likes_Count}}</span>
+
+                    <i class="fa-solid fa-quote-left"></i>
+                    <span>{{tweet.Quote_count}}</span>
+                </div>
+        </div>
+    </div>
+{% endfor %}
+
+</div>
+</div>
+
+</body>
+</html>
