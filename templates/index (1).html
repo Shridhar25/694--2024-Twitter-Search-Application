@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twitter Search Form</title>
+<link rel="stylesheet" type="text/css" href="static/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="toolbar">
+      <h1>Twitter Search App</h1>
+      <img src="static/twitter_logo.png" alt="Twitter Logo" class="twitter-logo">
+    </div>
+  </header>
+
+<div class="container">
+  <div class="left-side">
+    <h2>Tweet Search</h2>
+  <form action="/tweet_results" method="post">
+  
+  
+    <label for="relevance">Relevance</label>
+    <select id="relevance" name="relevance">
+      <option value="most_liked">Most Liked</option>
+      <option value="most_followed">Most Followed</option>
+      <option value="most_retweet">Most Re-Tweet</option>
+      <option value="most_quoted">Most Quoted</option>
+      <option value="most_recent">Most Recent</option>
+    </select>
+    <br><br>
+  
+    <label for="search_type">Search Type</label>
+    <select id="search_type" name="search_type">
+      <option value="text">Text</option>
+      <option value="username">Username</option>
+      <option value="text">User Screen Name</option>
+      <option value="hashtag">Hashtag</option>
+      <option value="advanced_search">Advanced Search</option>
+    </select>
+    <br><br>
+  
+    <label for="from_date">From Date</label>
+    <input type="date" id="from_date" name="from_date" value="2020-04-12">
+    <br><br>
+  
+    <label for="to_date">To Date</label>
+    <input type="date" id="to_date" name="to_date" value="2020-04-25">
+    <br><br>
+  
+    <label for="sentiment">Sentiment</label>
+    <select id="sentiment" name="sentiment">
+      <option>None</option>
+      <option value="positive">Positive</option>
+      <option value="negative">Negative</option>
+      <option value="neutral">Neutral</option>
+    </select>
+    <br><br>
+  
+      <label for="query_string">Search Text</label>
+      <input type="text" id="query_string" name="query_string">
+      <br><br>
+  
+    <input type="submit" value="Submit" class="button">
+  </form>
+  
+
+  </div>
+
+  <div class="right-side">
+    <h2>User Search</h2>
+    <form action="/user_results" method="post">
+    
+        <label for="name">Search User Profile</label>
+        <input type="text" id="name" name="name">
+        <br><br>
+    
+      <input type="submit" value="Submit" class="button">
+    </form>
+  </div>
+</div>
+<div class="b-container">
+  <a href="/top_likes">
+    <button class="button">Top 10 Liked Posts</button>
+  </a>
+  
+  <a href="/top_retweets">
+    <button class="button">Top 10 Re-Tweeted Posts</button>
+  </a>
+  
+  <a href="/top_quotes">
+    <button class="button">Top 10 Quoted Posts</button>
+  </a>  
+</div>
+
+</body>
+</html>

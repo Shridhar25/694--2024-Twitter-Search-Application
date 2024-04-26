@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tweeter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="toolbar">
+      <h1>Tweeter</h1>
+      <img src="twitter_logo.png" alt="Twitter Logo" class="twitter-logo">
+    </div>
+  </header>
+  <main>
+    <div class="toggle">
+      <button class="active" onclick="toggleFilter('user')">User</button>
+      <button onclick="toggleFilter('tweet')">Tweet</button>
+    </div>
+    <div id="userFilters" class="filters user-filters active">
+
+      <div class="filter">
+        <label for="verifiedStatus">Enter Verified Status:</label>
+        <select id="verifiedStatus">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+          <option value="none">None</option>
+        </select>
+      </div>
+      <div class="filter">
+        <label for="fromDate">Enter Date Range (From):</label>
+        <input type="date" id="fromDate">
+      </div>
+      <div class="filter">
+        <label for="toDate">Enter Date Range (To):</label>
+        <input type="date" id="toDate">
+      </div>
+    </div>
+    <div id="tweetFilters" class="filters tweet-filters">
+
+      <div class="filter">
+        <label for="tweetVerifiedStatus">Enter Verified Status:</label>
+        <select id="tweetVerifiedStatus">
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+          <option value="none">None</option>
+        </select>
+      </div>
+      <div class="filter">
+        <label for="tweetFromDate">Enter Date Range (From):</label>
+        <input type="date" id="tweetFromDate">
+      </div>
+      <div class="filter">
+        <label for="tweetToDate">Enter Date Range (To):</label>
+        <input type="date" id="tweetToDate">
+      </div>
+      <div class="filter">
+        <label for="searchType">Enter Search Type:</label>
+        <select id="searchType">
+          <option value="hashtag">By Hashtag</option>
+          <option value="text">By Text</option>
+        </select>
+      </div>
+      <div class="filter">
+        <label for="relevance">Enter Relevance:</label>
+        <select id="relevance">
+          <option value="mostLikes">By Most Likes</option>
+          <option value="mostFollowers">By Most Followers</option>
+          <option value="mostRetweets">By Most Re-tweets</option>
+          <option value="mostQuotes">By Most Quotes</option>
+          <option value="mostRecent">By Most Recent</option>
+          <option value="elasticSearch">By Elastic Search</option>
+        </select>
+      </div>
+    </div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search...">
+    </div>
+    <div class="buttons">
+      <button class="large enter" onclick="search()">&#128269; Enter</button>
+      <button class="large reset" onclick="reset()">&#128465; Reset</button>
+    </div>
+    <div class="results">
+
+    </div>
+    <div class="pagination">
+
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer-links">
+      <img src="github logo.png" alt="GitHub Logo">
+      <a href="https://github.com">GitHub Repository</a>
+      <img src="linkedin logo.png" alt="LinkedIn Logo">
+      <a href="https://linkedin.com">LinkedIn</a>
+    </div>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
