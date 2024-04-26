@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f8fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+  }
+  
+  header {
+    background-color: #1da1f2;
+    padding: 20px;
+    color: white;
+  }
+  
+  .toolbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toolbar h1 {
+    margin-right: auto;
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex: 1; 
+  }
+  
+  .left-container, .right-container {
+    width: 45%;
+  }
+  
+  .user-details {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .user-details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .user-details p {
+    margin-bottom: 5px;
+  }
+  
+  .user-details .verified {
+    color: #1da1f2;
+  }
+  
+  .tweet-results {
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  .footer {
+    background-color: #1da1f2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; 
+  }
+  
+  .footer-links img {
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+  }
+  
